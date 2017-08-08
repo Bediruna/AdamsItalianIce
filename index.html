@@ -121,8 +121,11 @@
 				<!--
 				<img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
 				-->
-				<p><strong>Opening hours:</strong> everyday from 11am to 10pm.</p>
-				<p><strong>Address:</strong>12200 Menta St, Orlando, FL 32837</p>
+				<p><strong>Opening hours:</strong></p>
+				<p>Sunday - Thursday 11:00AM - 10:00PM</p>
+				<p>Friday & Saturday 11:00AM - 11:00PM</p>
+				
+				<p><strong>Address:</strong> 12200 Menta St, Orlando, FL 32837</p>
 				
 			</div>
 		</div>
@@ -208,9 +211,44 @@
 				
 				<form action="/action_page.php" target="_blank">
 				
-					<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+					<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="First and last Name" required name="Name"></p>
 					
-					<p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Flavor" required name="People"></p>
+					<select required name="flavor" class="w3-input w3-padding-16 w3-border">
+						
+						<option value="none" selected>Select a Flavor</option>
+						
+						<option value="banana">Banana</option>
+						<option value="blue rasberry">Blue Rasberry</option>
+						<option value="bubble gum">Bubble Gum</option>
+						<option value="chery">Cherry</option>
+						<option value="chocolate">Chocolate</option>
+						<option value="coconut cream">Coconut Cream</option>
+						<option value="cotton candy">Cotton Candy</option>
+						<option value="fire and ice">Fire and Ice</option>
+						<option value="grape">Grape</option>
+						<option value="guanabana">Guanabana</option>
+						<option value="horchata">Horchata</option>
+						<option value="lemon">Lemon</option>
+						<option value="mango">Mango</option>
+						<option value="mint chocolate chip">Mint Chocolate Chip</option>
+						<option value="mokaccino">Mokaccino</option>
+						<option value="orange cream">Orange Cream</option>
+						<option value="passion fruit">Passion Fruit</option>
+						<option value="peach">Peach</option>
+						<option value="pinacolada">Pinacolada</option>
+						<option value="pinepple">Pineapple</option>
+						<option value="rainbow">Rainbow</option>
+						<option value="red rasberry">Red Rasberry</option>
+						<option value="root beer">Root Beer</option>
+						<option value="salty caramel">Salty Caramel</option>
+						<option value="sour apple">Sour Apple</option>
+						<option value="strawberry">Strawberry</option>
+						<option value="strawberry kiwi">Strawberry Kiwi</option>
+						<option value="tamarind">Tamarind</option>
+						<option value="watermelon">Watermelon</option>
+						
+						
+					</select>
 					
 					<p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2017-08-16T20:00"></p>
 					
