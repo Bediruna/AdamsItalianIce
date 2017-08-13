@@ -46,63 +46,60 @@
 			display: none;
 
 		}
+		
+		* {box-sizing:border-box}
+		.mySlides {display:none}
 	
 	</style>
 
 </head>
 
 <body>
-
-	<!-- Links (sit on top) -->
+	
+	<!-- Navbar -->
 	<div class="w3-top">
-
-		<div class="w3-row w3-padding w3-black">
-	  
-			<div class="w3-col s3">
-		
-				<a href="#" class="w3-button w3-block w3-black">HOME</a>
-		
-			</div>
+	
+		<div class="w3-bar w3-black w3-card-2">
 			
-			<div class="w3-col s3">
-		
-				<a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
-		
-			</div>
-			
-			<div class="w3-col s3">
-		
-				<a href="#menu" class="w3-button w3-block w3-black">MENU</a>
-		  
-			</div>
-			
-			<div class="w3-col s3">
-			
-				<a href="#where" class="w3-button w3-block w3-black">WHERE</a>
-			
-			</div>
+			<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+			<a href="index.html" class="active w3-bar-item w3-button w3-padding-large" >
+			<img src="Polar Bear.png" style="width:100%;max-width: 100px; min-width:50px"></a>
+			<a href="location" class="w3-bar-item w3-button w3-padding-48 w3-padding-large w3-hide-small w3-right" style="font-size:19px">LOCATION</a>
+			<a href="order" class="w3-bar-item w3-button w3-padding-48 w3-padding-large w3-hide-small w3-right" style="font-size:19px">ORDER</a>
+			<a href="menu" class="w3-bar-item w3-button w3-padding-48 w3-padding-large w3-hide-small w3-right" style="font-size:19px">MENU</a>
 			
 		</div>
 		
 	</div>
 
-	<!-- Header with image -->
-	<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+	<!-- Navbar on small screens -->
+	<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:110px">
 		
-		<!--
-		<div class="w3-display-middle w3-center">
+		<a href="menu" class="w3-bar-item w3-button w3-padding-large">MENU</a>
+		<a href="order" class="w3-bar-item w3-button w3-padding-large">ORDER</a>
+		<a href="location" class="w3-bar-item w3-button w3-padding-large">LOCATION</a>
 		
-			<span class="w3-text-black" style="font-size:90px">Adam's<br>Italian Ice</span>
+	</div>
+	
+	<br>
+	<br>
+	
+	<!-- Header -->
+	<header class="w3-display-container w3-content w3-wide" style="max-width:2000px;min-width:300px" id="home">
 		
+		<!-- Automatic Slideshow Images -->
+		<div class="mySlides w3-display-container w3-center">
+			<img src="AssortedBG.jpg" style="width:100%;min-height:203px;max-height:903px">
 		</div>
-		-->
 		
-		<div class="w3-display-bottomright w3-center w3-padding-large">
-		
-			<span class="w3-text-white">12200 Menta St, Orlando, FL 32837</span>
-		
+		<div class="mySlides w3-display-container w3-center">
+			<img src="SourApple.jpg" style="width:100%;min-height:203px;max-height:903px">
 		</div>
 		
+		<div class="mySlides w3-display-container w3-center">
+			<img src="ItalianCannoli.jpg" style="width:100%;min-height:203px;max-height:903px">
+		</div>
+				
 	</header>
 
 
@@ -187,8 +184,6 @@
 					
 				</div>
 			
-				<img src="AssortedIce.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
-			
 			</div>
 			
 		</div>
@@ -209,7 +204,7 @@
 				
 				<p><strong>Order</strong> a large bucket of any of our custom made flavors:</p>
 				
-				<form action="/action_page.php" target="_blank">
+				<form action="MAILTO:emailaddress@email.com">
 				
 					<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="First and last Name" required name="Name"></p>
 					
@@ -278,6 +273,27 @@
 	</footer>
 	
 	<script>
+	
+		// Automatic Slideshow - change image every 4 seconds
+		var myIndex = 0;
+		carousel();
+
+		function carousel() {
+		
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			
+			for (i = 0; i < x.length; i++) {
+			
+				x[i].style.display = "none";  
+			
+			}
+			myIndex++;
+			if (myIndex > x.length) {myIndex = 1}    
+			x[myIndex-1].style.display = "block";  
+			setTimeout(carousel, 4500);   
+			
+		}
 
 		function myMap(){
 		
@@ -331,6 +347,20 @@
 		}
 		
 		document.getElementById("myLink").click();
+		
+		// Used to toggle the menu on small screens when clicking on the menu button
+		function myFunction() {
+		
+			var x = document.getElementById("navDemo");
+			if (x.className.indexOf("w3-show") == -1) {
+				x.className += " w3-show";
+				
+			} else {
+			
+				x.className = x.className.replace(" w3-show", "");
+			}
+			
+		}
 
     </script>
 

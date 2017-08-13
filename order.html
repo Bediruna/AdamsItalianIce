@@ -1,1 +1,180 @@
+<!DOCTYPE html>
+<html>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+
+	<title>Adam's Italian Ice</title>
+	
+	<link rel="shortcut icon" href="polarbear-icon.ico" />
+	
+	<style>
+	
+		/* Optional: Makes the sample page fill the window. */
+		html, body {
+		
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			
+		}
+
+		.bgimg {
+
+			background-position: center;
+			background-size: cover;
+			background-image: url("Logo.png");
+			min-height: 60%;
+
+		}
+
+		.menu {
+
+			display: none;
+
+		}
+	
+	</style>
+
+</head>
+
+<body>
+	
+	<!-- Navbar -->
+	<div class="w3-top">
+	
+		<div class="w3-bar w3-black w3-card-2">
+			
+			<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+			<a href="index.html" class="active w3-bar-item w3-button w3-padding-large" >
+			<img src="Polar Bear.png" style="width:100%;max-width: 100px; min-width:50px"></a>
+			<a href="location" class="w3-bar-item w3-button w3-padding-48 w3-padding-large w3-hide-small w3-right" style="font-size:19px">LOCATION</a>
+			<a href="order" class="w3-bar-item w3-button w3-padding-48 w3-padding-large w3-hide-small w3-right" style="font-size:19px">ORDER</a>
+			<a href="menu" class="w3-bar-item w3-button w3-padding-48 w3-padding-large w3-hide-small w3-right" style="font-size:19px">MENU</a>
+			
+		</div>
+		
+	</div>
+
+	<!-- Navbar on small screens -->
+	<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:110px">
+		
+		<a href="menu" class="w3-bar-item w3-button w3-padding-large">MENU</a>
+		<a href="order" class="w3-bar-item w3-button w3-padding-large">ORDER</a>
+		<a href="location" class="w3-bar-item w3-button w3-padding-large">LOCATION</a>
+		
+	</div>
+	
+	
+	<br><br>
+	<br><br>
+
+
+	<!-- Add a background color and large text to the whole page -->
+	<div class="w3-blue w3-large">
+
+
+		<!-- Contact/Area Container -->
+		<div class="w3-container" id="where" style="padding-bottom:32px;">
+
+			<div class="w3-content" style="max-width:700px">
+				
+				<br><br>
+				
+				<p><span class="w3-tag">NEW!</span> We offer our treats for large events.</p>
+				
+				<p><strong>Order</strong> a large bucket of any of our custom made flavors:</p>
+				
+				<form action="MAILTO:emailaddress@email.com">
+				
+					<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="First and last Name" required name="Name"></p>
+					
+					<select required name="flavor" class="w3-input w3-padding-16 w3-border">
+						
+						<option value="none" selected>Select a Flavor</option>
+						
+						<option value="banana">Banana</option>
+						<option value="blue rasberry">Blue Rasberry</option>
+						<option value="bubble gum">Bubble Gum</option>
+						<option value="chery">Cherry</option>
+						<option value="chocolate">Chocolate</option>
+						<option value="coconut cream">Coconut Cream</option>
+						<option value="cotton candy">Cotton Candy</option>
+						<option value="fire and ice">Fire and Ice</option>
+						<option value="grape">Grape</option>
+						<option value="guanabana">Guanabana</option>
+						<option value="horchata">Horchata</option>
+						<option value="lemon">Lemon</option>
+						<option value="mango">Mango</option>
+						<option value="mint chocolate chip">Mint Chocolate Chip</option>
+						<option value="mokaccino">Mokaccino</option>
+						<option value="orange cream">Orange Cream</option>
+						<option value="passion fruit">Passion Fruit</option>
+						<option value="peach">Peach</option>
+						<option value="pinacolada">Pinacolada</option>
+						<option value="pinepple">Pineapple</option>
+						<option value="rainbow">Rainbow</option>
+						<option value="red rasberry">Red Rasberry</option>
+						<option value="root beer">Root Beer</option>
+						<option value="salty caramel">Salty Caramel</option>
+						<option value="sour apple">Sour Apple</option>
+						<option value="strawberry">Strawberry</option>
+						<option value="strawberry kiwi">Strawberry Kiwi</option>
+						<option value="tamarind">Tamarind</option>
+						<option value="watermelon">Watermelon</option>
+						
+						
+					</select>
+					
+					<p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2017-08-16T20:00"></p>
+					
+					<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message / Special requirements" required name="Message"></p>
+					
+					<p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+					
+				</form>
+				
+			</div>
+			
+		</div>
+
+	<!-- End page content -->
+	</div>
+
+	<!-- Footer -->
+	<footer class="w3-center w3-light-grey w3-padding-48 w3-large">	
+		
+		<p><b>Check us out on Facebook and Yelp</b></p>
+		
+		<a href="https://www.facebook.com/AdamsItalianIce/" class="fa fa-facebook-official w3-hover-opacity" style="text-decoration: none;font-size:40px;color:blue;"></a>
+		
+		<a href="https://www.yelp.com/biz/adams-italian-ice-orlando-2" class="fa fa-yelp w3-hover-opacity" style="text-decoration: none; font-size:40px;color:red;"></a>
+		<br>
+		
+	</footer>
+	
+	<script>
+		
+		// Used to toggle the menu on small screens when clicking on the menu button
+		function myFunction() {
+		
+			var x = document.getElementById("navDemo");
+			if (x.className.indexOf("w3-show") == -1) {
+				x.className += " w3-show";
+				
+			} else {
+			
+				x.className = x.className.replace(" w3-show", "");
+			}
+			
+		}
+
+    </script>
+
+</body>
+	
+</html>

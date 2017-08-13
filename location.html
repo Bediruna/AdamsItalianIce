@@ -1,1 +1,184 @@
+<!DOCTYPE html>
+<html>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+
+	<title>Adam's Italian Ice</title>
+	
+	<link rel="shortcut icon" href="polarbear-icon.ico" />
+	
+	<style>
+	
+		/* Always set the map height explicitly to define the size of the div
+		* element that contains the map. */
+		
+		#map {
+		
+			height: 100%;
+		
+		}
+		
+		/* Optional: Makes the sample page fill the window. */
+		html, body {
+		
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			
+		}
+
+		.bgimg {
+
+			background-position: center;
+			background-size: cover;
+			background-image: url("Logo.png");
+			min-height: 60%;
+
+		}
+
+		.menu {
+
+			display: none;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+	
+	<!-- Navbar -->
+	<div class="w3-top">
+	
+		<div class="w3-bar w3-black w3-card-2">
+			
+			<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+			<a href="index.html" class="active w3-bar-item w3-button w3-padding-large" >
+			<img src="Polar Bear.png" style="width:100%;max-width: 100px; min-width:50px"></a>
+			<a href="location" class="w3-bar-item w3-button w3-padding-48 w3-padding-large w3-hide-small w3-right" style="font-size:19px">LOCATION</a>
+			<a href="order" class="w3-bar-item w3-button w3-padding-48 w3-padding-large w3-hide-small w3-right" style="font-size:19px">ORDER</a>
+			<a href="menu" class="w3-bar-item w3-button w3-padding-48 w3-padding-large w3-hide-small w3-right" style="font-size:19px">MENU</a>
+			
+		</div>
+		
+	</div>
+
+	<!-- Navbar on small screens -->
+	<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:110px">
+		
+		<a href="menu" class="w3-bar-item w3-button w3-padding-large">MENU</a>
+		<a href="order" class="w3-bar-item w3-button w3-padding-large">ORDER</a>
+		<a href="location" class="w3-bar-item w3-button w3-padding-large">LOCATION</a>
+		
+	</div>
+	
+	<br><br><br><br><br>
+
+
+	<!-- Add a background color and large text to the whole page -->
+	<div class="w3-blue w3-large">
+		
+		<br>
+		
+		<!-- About Container -->
+		<div class="w3-container" id="about">
+
+			<div class="w3-content" style="max-width:700px">
+			
+				<p><strong>Opening hours:</strong></p>
+				<p>Sunday - Thursday 11:00AM - 10:00PM</p>
+				<p>Friday & Saturday 11:00AM - 11:00PM</p>
+				
+				<p><strong>Address:</strong> 12200 Menta St, Orlando, FL 32837</p>
+				
+			</div>
+		</div>
+
+		<!-- Contact/Area Container -->
+		<div class="w3-container" id="where" style="padding-bottom:32px;">
+
+			<div class="w3-content" style="max-width:700px">
+			
+				<h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
+				
+				<p>Find us at 12200 Menta St, Orlando, FL 32837</p>
+				
+				<!-- Add Google Maps -->
+				<div id="googleMap" style="width:100%;height:400px;"></div>				
+				
+			</div>
+			
+		</div>
+
+	<!-- End page content -->
+	</div>
+
+	<!-- Footer -->
+	<footer class="w3-center w3-light-grey w3-padding-48 w3-large">	
+		
+		<p><b>Check us out on Facebook and Yelp</b></p>
+		
+		<a href="https://www.facebook.com/AdamsItalianIce/" class="fa fa-facebook-official w3-hover-opacity" style="text-decoration: none;font-size:40px;color:blue;"></a>
+		
+		<a href="https://www.yelp.com/biz/adams-italian-ice-orlando-2" class="fa fa-yelp w3-hover-opacity" style="text-decoration: none; font-size:40px;color:red;"></a>
+		<br>
+		
+	</footer>
+	
+	<script>
+
+		function myMap(){
+		
+			myCenter=new google.maps.LatLng(28.387995, -81.424382);
+			
+			var mapOptions= {
+			
+				center:myCenter,
+				zoom:15,
+				scrollwheel: false,
+				draggable: false,
+				mapTypeId:google.maps.MapTypeId.ROADMAP
+			
+			};
+
+			var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+			var marker = new google.maps.Marker({
+
+				position: myCenter,
+			
+			});
+			
+			marker.setMap(map);
+			
+		}
+
+		
+		// Used to toggle the menu on small screens when clicking on the menu button
+		function myFunction() {
+		
+			var x = document.getElementById("navDemo");
+			if (x.className.indexOf("w3-show") == -1) {
+				x.className += " w3-show";
+				
+			} else {
+			
+				x.className = x.className.replace(" w3-show", "");
+			}
+			
+		}
+
+    </script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEmtrdfMgiOfxx1IPIlitmd2qF7zt-OpU&callback=myMap">
+    </script>
+	
+</body>
+	
+</html>
