@@ -13,15 +13,6 @@
 	<link rel="shortcut icon" href="polarbear-icon.ico" />
 	
 	<style>
-	
-		/* Always set the map height explicitly to define the size of the div
-		* element that contains the map. */
-		
-		#map {
-		
-			height: 100%;
-		
-		}
 		
 		/* Optional: Makes the sample page fill the window. */
 		html, body {
@@ -38,12 +29,6 @@
 			background-size: cover;
 			background-image: url("Logo.png");
 			min-height: 60%;
-
-		}
-
-		.menu {
-
-			display: none;
 
 		}
 		
@@ -115,148 +100,18 @@
 				<p>Adam's Italian Ice was founded in blabla by Mr. Smith in...</p>
 				<p>In addition to our full...</p>
 				
-				<!--
-				<img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
-				-->
-				<p><strong>Opening hours:</strong></p>
+				<p><strong>Hours:</strong></p>
 				<p>Sunday - Thursday 11:00AM - 10:00PM</p>
 				<p>Friday & Saturday 11:00AM - 11:00PM</p>
 				
 				<p><strong>Address:</strong> 12200 Menta St, Orlando, FL 32837</p>
 				
 			</div>
-		</div>
-
-		<!-- Menu Container -->
-		<div class="w3-container" id="menu">
-			
-			<div class="w3-content" style="max-width:700px">
-		 
-				<h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE MENU</span></h5>
-		  
-				<div class="w3-row w3-center w3-card-2 w3-padding">
-				
-					<a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
-						<div class="w3-col s6 tablink">Ice Cream</div>
-					</a>
-					
-					<a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
-						<div class="w3-col s6 tablink">Italian Ice</div>
-					</a>
-					
-				</div>
-
-				<div id="Eat" class="w3-container menu w3-padding-48 w3-card-2">
-				
-					<h5>Bread Basket</h5>
-					<p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
-
-					<h5>Honey Almond Granola with Fruits</h5>
-					<p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
-
-					<h5>Belgian Waffle</h5>
-					<p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
-
-					<h5>Scrambled eggs</h5>
-					<p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
-
-					<h5>Blueberry Pancakes</h5>
-					<p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>
-					
-				</div>
-
-				<div id="Drinks" class="w3-container menu w3-padding-48 w3-card-2">
-				
-					<h5>Coffee</h5>
-					<p class="w3-text-grey">Regular coffee 2.50</p><br>
-
-					<h5>Chocolato</h5>
-					<p class="w3-text-grey">Chocolate espresso with milk 4.50</p><br>
-
-					<h5>Corretto</h5>
-					<p class="w3-text-grey">Whiskey and coffee 5.00</p><br>
-
-					<h5>Iced tea</h5>
-					<p class="w3-text-grey">Hot tea, except not hot 3.00</p><br>
-
-					<h5>Soda</h5>
-					<p class="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
-					
-				</div>
-			
-			</div>
 			
 		</div>
-
-		<!-- Contact/Area Container -->
-		<div class="w3-container" id="where" style="padding-bottom:32px;">
-
-			<div class="w3-content" style="max-width:700px">
-			
-				<h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
-				
-				<p>Find us at 12200 Menta St, Orlando, FL 32837</p>
-				
-				<!-- Add Google Maps -->
-				<div id="googleMap" style="width:100%;height:400px;"></div>
-				
-				<p><span class="w3-tag">NEW!</span> We offer our treats for large events.</p>
-				
-				<p><strong>Order</strong> a large bucket of any of our custom made flavors:</p>
-				
-				<form action="MAILTO:emailaddress@email.com">
-				
-					<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="First and last Name" required name="Name"></p>
-					
-					<select required name="flavor" class="w3-input w3-padding-16 w3-border">
-						
-						<option value="none" selected>Select a Flavor</option>
-						
-						<option value="banana">Banana</option>
-						<option value="blue rasberry">Blue Rasberry</option>
-						<option value="bubble gum">Bubble Gum</option>
-						<option value="chery">Cherry</option>
-						<option value="chocolate">Chocolate</option>
-						<option value="coconut cream">Coconut Cream</option>
-						<option value="cotton candy">Cotton Candy</option>
-						<option value="fire and ice">Fire and Ice</option>
-						<option value="grape">Grape</option>
-						<option value="guanabana">Guanabana</option>
-						<option value="horchata">Horchata</option>
-						<option value="lemon">Lemon</option>
-						<option value="mango">Mango</option>
-						<option value="mint chocolate chip">Mint Chocolate Chip</option>
-						<option value="mokaccino">Mokaccino</option>
-						<option value="orange cream">Orange Cream</option>
-						<option value="passion fruit">Passion Fruit</option>
-						<option value="peach">Peach</option>
-						<option value="pinacolada">Pinacolada</option>
-						<option value="pinepple">Pineapple</option>
-						<option value="rainbow">Rainbow</option>
-						<option value="red rasberry">Red Rasberry</option>
-						<option value="root beer">Root Beer</option>
-						<option value="salty caramel">Salty Caramel</option>
-						<option value="sour apple">Sour Apple</option>
-						<option value="strawberry">Strawberry</option>
-						<option value="strawberry kiwi">Strawberry Kiwi</option>
-						<option value="tamarind">Tamarind</option>
-						<option value="watermelon">Watermelon</option>
-						
-						
-					</select>
-					
-					<p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2017-08-16T20:00"></p>
-					
-					<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message / Special requirements" required name="Message"></p>
-					
-					<p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
-					
-				</form>
-				
-			</div>
-			
-		</div>
-
+		
+		<br>
+	
 	<!-- End page content -->
 	</div>
 
@@ -294,59 +149,6 @@
 			setTimeout(carousel, 4500);   
 			
 		}
-
-		function myMap(){
-		
-			myCenter=new google.maps.LatLng(28.387995, -81.424382);
-			
-			var mapOptions= {
-			
-				center:myCenter,
-				zoom:15,
-				scrollwheel: false,
-				draggable: false,
-				mapTypeId:google.maps.MapTypeId.ROADMAP
-			
-			};
-
-			var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-
-			var marker = new google.maps.Marker({
-
-				position: myCenter,
-			
-			});
-			
-			marker.setMap(map);
-			
-		}
-
-		// Tabbed Menu
-		function openMenu(evt, menuName) {
-		
-			var i, x, tablinks;
-			
-			x = document.getElementsByClassName("menu");
-			
-			for (i = 0; i < x.length; i++) {
-			
-				x[i].style.display = "none";
-			
-			}
-			tablinks = document.getElementsByClassName("tablink");
-			
-			for (i = 0; i < x.length; i++) {
-			
-				tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
-			
-			}
-			
-			document.getElementById(menuName).style.display = "block";
-			evt.currentTarget.firstElementChild.className += " w3-dark-grey";
-		
-		}
-		
-		document.getElementById("myLink").click();
 		
 		// Used to toggle the menu on small screens when clicking on the menu button
 		function myFunction() {
